@@ -11,6 +11,6 @@ Le jeu a été codé avec les langages suivants :
 * CSS
 * JAVASCRIPT
 
-## Exemple d'interface du jeu :
+## Exemple d'interface du site :
 
 <img width="500px" height="300px" src="arbre.PNG" />
