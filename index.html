@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Site Web #1</title>
+</head>
+<body>
+    <nav>
+        <div class="theme-btn invisible"></div>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="theme-btn" id="themeBtn">
+            <ion-icon name="moon" id="moonBtn"></ion-icon>
+            <ion-icon name="sunny" id="sunBtn" class="invisible dnone"></ion-icon>
+        </div>
+    </nav>
+    <header>
+        <h1>Les arbres en <span class="bleu">Fr</span><span class="blanc">an</span><span class="rouge">ce</span></h1>
+        <div id="header_background"></div>
+    </header>
+    <section id="accueil">
+        <div>
+            <img src="./images/arbre2.jpg" alt="Arbre">
+        </div>
+        <div id="accueil_text">
+            <h2>Accueil</h2>
+            <p>Voici un site pour vous présenter les différents arbres qui se trouvent <strong>en France</strong></p>
+        </div>
+    </section>
+    <section id="galerie">
+        <h2>Galerie</h2>
+        <p>Voici le top 4 des espèces d'arbres les plus représentées en France Métropolitaine</p>
+        <div id="mesphotos">
+            <img src="./images/chene.jpg" alt="Chêne">
+            <img src="./images/hetre.jpg" alt="Hêtre">
+            <img src="./images/sapin.jpg" alt="Sapin">
+            <img src="./images/epicea.jpg" alt="Épicéa">
+        </div>
+        <a class="btnVert"href="">En savoir plus</a>
+    </section>
+    <section id="contact">
+        <h2>Me contacter</h2>
+        <form action="mailto:test@mail.com">
+            <label for="prenom">Votre prénom</label>
+            <input type="text" id="prenom" placeholder="Auguste" required>
+            <label for="email">Votre E-mail</label>
+            <input type="text" id="email" placeholder="exemple@arbre.fr" required>
+            <label for="message"></label>
+            <textarea name="message" id="message" placeholder="Votre message" required></textarea>
+
+            <button type="submit" class="btnVert">Envoyer</button>
+        </form>
+    </section>
+    <footer>
+        <p>Les arbres de France - &copy; Bastien Mézière</p>
+        <div id="divSocial">
+            <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href=""><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+        </div>
+    </footer>
+    <script src="./app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

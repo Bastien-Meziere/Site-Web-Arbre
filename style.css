@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Luckiest+Guy&display=swap');
+
+/* Variables CSS */
+:root {
+    --vert: #06A77D;
+    --ombre: 0 2px 5px rgba(0,0,0,0.3);
+    --noir: #000;
+    --gris: #eeeeee;
+    --grisfonce: #2B303A;
+    --bleu: #3F84E5;
+    --blanc: #ffffff;
+    --rouge: #CC2936;
+}
+
+/* CSS Général */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button, input, textarea {
+    outline: none;
+    border: none;
+    font-family: sans-serif;
+}
+
+body {
+    max-width: 100vw;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+h2 {
+    display: inline-block;
+    padding: 0 10px 0 0;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 70%, var(--vert));
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+section {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.btnVert {
+    cursor: pointer;
+    display: block;
+    width: max-content;
+    text-decoration: none;
+    padding: 10px 60px;
+    border-radius: 30px;
+    background-color: var(--noir);
+    color: #fff;
+    margin: 30px auto;
+    transition: all 0.3s ease;
+}
+
+.btnVert:hover {
+    background-color: var(--vert);
+    color: var(--noir);
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.dnone {
+    display: none;
+}
+
+/* Barre de navigation */
+
+nav {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    height: 50px;
+    color: var(--noir);
+    box-shadow: var(--ombre);
+}
+
+body nav {
+    background-color: white;
+}
+
+nav > ul {
+    display: flex;
+    height: 100%;
+    width: min-content;
+    list-style: none;
+    margin: auto;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 0 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--noir);
+}
+
+nav ul li a:hover {
+    color: var(--vert);
+    transition: 0.2s;
+}
+
+nav ul li:nth-of-type(2) a {
+    border-left: 1px solid var(--noir);
+    border-right: 1px solid var(--noir);
+}
+
+/* Header */
+
+header {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    position: absolute;
+    font-size: 60px;
+    color: var(--blanc);
+    font-family: 'Chelsea Market', cursive;
+    z-index: 1;
+}
+
+header #header_background {
+    height: 100%;
+    width: 100%;
+    background-image: url('./images/arbre.jpg');
+    background-position: center;
+    background-size: cover;
+    filter: brightness(35%);
+}
+
+.bleu {
+    color: var(--bleu);
+}
+
+.blanc {
+    color: var(--blanc);
+}
+
+.rouge {
+    color: var(--rouge);
+}
+
+/* Accueil */
+
+section#accueil {
+    display: flex;
+}
+
+section#accueil > div {
+    height: 100%;
+}
+
+section#accueil > div img {
+    max-height: 400px;
+    border-radius: 10px;
+    margin-right: 30px;
+}
+
+/* Galerie */
+
+div#mesphotos {
+    display: flex;
+    width: 100%;
+}
+
+div#mesphotos img {
+    width: 25%;
+    box-shadow: none;
+    transition: all 0.3s ease;
+}
+
+div#mesphotos img:hover {
+    transform: scale(1.1);
+    box-shadow: var(--ombre);
+}
+
+/* Contact */
+
+section#contact {
+    padding-bottom: 100px;
+}
+
+form {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    padding: 30px 30px 0px 30px;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    margin-bottom: 25px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border-bottom: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+form input::placeholder, form textarea::placeholder {
+    font-size: 16px;
+    font-family: inherit;
+}
+
+form textarea {
+    height: 200px;
+    margin-bottom: 0;
+}
+
+form input:valid, form textarea:valid {
+    border-bottom: 5px solid var(--vert);
+}
+
+form input:invalid, form textarea:invalid {
+    border-bottom: 5px solid var(--rouge);
+}
+
+/* Footer */
+
+footer {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--noir);
+    color: var(--blanc);
+    font-size: 18px;
+    padding: 15px;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer div#divSocial {
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+footer div#divSocial a {
+    color: var(--blanc);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer div#divSocial a:hover {
+    color: var(--vert);
+}
+
+/* Mode sombre */
+
+.theme-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--gris);
+    color: var(--noir);
+    cursor: pointer;
+}
+
+.theme-btn > ion-icon {
+    height: 25px;
+    width: 25px;
+}
+
+body.dark .btnVert {
+    background-color: var(--gris);
+    color: var(--noir);
+}
+
+body.dark .btnVert:hover, .btnVert:hover {
+    background-color: var(--vert);
+    color: var(--noir);
+}
+
+body.dark nav {
+    background-color: var(--noir);
+    color: var(--blanc);
+}
+
+body.dark nav ul li a {
+    color: var(--blanc);
+}
+
+body.dark {
+    color: var(--gris);
+    background-color: var(--grisfonce);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1000px) {
+    section {
+        width: 90%;
+    }
+
+    header {
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    header {
+        height: 40vh;
+    }
+    
+    header h1 {
+        font-size: 50px;
+    }
+
+    section#accueil > div img {
+        max-height: 200px;
+    }
+
+    div#mesphotos {
+        flex-wrap: wrap;
+    }
+
+    div#mesphotos img {
+        width: 50%;
+    }
+
+    form {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body, form input, form textarea {
+        font-size: 14px;
+    }
+
+    nav ul li a {
+        padding: 0 15px;
+    }
+
+    h2 {
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+}
